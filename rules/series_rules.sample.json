@@ -1,0 +1,16 @@
+[
+  {
+    "brand": "BRYANT",
+    "pattern": "191VAN*",
+    "name_prefix": "Bryant",
+    "series": "Preferred",
+    "type": "Air Conditioner"
+  },
+  {
+    "brand": "BRYANT",
+    "pattern": "148TAN*",
+    "name_prefix": "Bryant",
+    "series": "Legacy",
+    "type": "Heat Pump"
+  }
+]

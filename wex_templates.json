@@ -1,0 +1,49 @@
+{
+  "wex_single_part": {
+    "template_sheet": "Single part",
+    "start_row": 4,
+    "model_col": "AD",
+    "folder_cols": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "part_name_col": "V",
+    "part_desc_col": "AE"
+  },
+  "wex_supplier_loader": {
+    "template_sheet": "Sheet1",
+    "start_row": 5,
+    "model_col": "F",
+    "folder_cols": [],
+    "part_name_col": "B",
+    "part_desc_col": "I",
+    "price_col": "L",
+    "brand_col": "G",
+    "category_col": "H",
+    "supplier_name_col": "A"
+  },
+  "wex_bundle_1part_1labor": {
+    "template_sheet": "Bundle (1 part, 1 labor)",
+    "start_row": 5,
+    "model_col": "AD",
+    "folder_cols": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "product_name_col": "F",
+    "product_desc_col": "L",
+    "product_model_col": "K",
+    "product_price_col": "M",
+    "part_name_col": "V",
+    "part_model_col": "AD",
+    "part_desc_col": "AE",
+    "part_cost_col": "AA",
+    "part_price_col": "AB"
+  }
+}
