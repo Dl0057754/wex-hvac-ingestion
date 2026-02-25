@@ -2,6 +2,7 @@ import os
 import shutil
 import subprocess
 import tempfile
+import sys
 from pathlib import Path
 
 import streamlit as st
@@ -30,7 +31,7 @@ st.caption("Upload distributor files + choose template → get a WEX-ready sprea
 
 def run_cmd(cmd, cwd):
     """Run a subprocess and stream logs to UI."""
-    st.code(" ".join(cmd), language="bash")
+    st.code(" ".join([str(x) for x in cmd]), language="bash")
     p = subprocess.Popen(cmd, cwd=cwd, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True)
     out_lines = []
     placeholder = st.empty()
@@ -195,7 +196,7 @@ if run:
         try:
             st.markdown("### Stage A: Convert distributor file(s) → WEX skeleton (v2)")
             convert_cmd = [
-                "python",
+                sys.executable,
                 str(CONVERTER),
                 "--input", str(in_dir),
                 "--template", str(template_path),
@@ -211,7 +212,7 @@ if run:
 
             st.markdown("### Stage B: Enrich skeleton → WEX-ready (v2 + rules)")
             enrich_cmd = [
-                "python",
+                sys.executable,
                 str(ENRICHER),
                 "--input", str(skeleton_path),
                 "--brand", brand,
